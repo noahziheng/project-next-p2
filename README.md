@@ -59,7 +59,7 @@ module.exports = Dust;   // 最后暴露 Dust 类
 
 4. `webpack` 和 `webpack-dev-server` 只需装到项目本地，不需要全局安装，使用 [`npm scripts`](https://doc.webpack-china.org/guides/getting-started/#npm-npm-scripts-) 运行构建任务，比如`npm run build` 运行 `webpack` 命令, `npm run server` 可以开启本地服务器。
 
-5. 将打包后 `dist` 目录代码直接放到 Gitlab Pages, 提交 Merge Request 的时候贴上可以直接访问的链接。
+5. 将打包后 `dist` 目录代码直接放到 Gitlab Pages, 提交 Merge Request 的时候在评论贴上可以直接访问的链接。
 
 ## 最后
 只会三大语言而不懂工程化已经不能算一个合格的前端开发了，工程化当然也是面试官必问的问题。

@@ -1,6 +1,7 @@
 // 小鱼类
 
-// 依赖 global, util
+var global = require('./global') // 依赖 global
+var util = require('./util') // 依赖 util
 
 var imgUrl = global.imgUrl
 var ctx1 = global.ctx1
@@ -106,3 +107,5 @@ Baby.prototype.drawBaby = function () {
 
   ctx1.restore() // 操作完后返回到之前的画布
 }
+
+module.exports = Baby

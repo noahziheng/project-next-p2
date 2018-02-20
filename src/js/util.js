@@ -38,4 +38,4 @@ var util = { // eslint-disable-line no-unused-vars
   distance: distance
 }
 
-// 暴露 util
+module.exports = util // 暴露 util

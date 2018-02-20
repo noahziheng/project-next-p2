@@ -1,6 +1,6 @@
 // 果实类
 
-// 依赖 global
+var global = require('./global') // 依赖 global
 
 var ctx2 = global.ctx2
 var imgUrl = global.imgUrl
@@ -87,3 +87,5 @@ function bornFruit () { // 循环生成30个果实，如果状态为false，则�
     }
   }
 }
+
+module.exports = Fruit

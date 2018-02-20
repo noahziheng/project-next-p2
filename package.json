@@ -6,14 +6,33 @@
   "dependencies": {
     "standard": "^11.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.0",
+    "webpack": "^3.11.0"
+  },
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Noah Gao & Tencent IMWeb",
   "license": "ISC",
   "standard": {
-    "global": ["util",  "Ane", "Fruit", "Mom", "Baby", "Score", "Wave", "Halo", "Dust", "Controller"]
+    "global": [
+      "util",
+      "Ane",
+      "Fruit",
+      "Mom",
+      "Baby",
+      "Score",
+      "Wave",
+      "Halo",
+      "Dust",
+      "Controller"
+    ]
   }
 }

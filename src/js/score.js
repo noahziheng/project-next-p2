@@ -1,6 +1,6 @@
 // 数据类
 
-// 依赖 global
+var global = require('./global') // 依赖 global
 
 var ctx1 = global.ctx1
 var canWid = global.canWid
@@ -57,3 +57,5 @@ Score.prototype.computeScore = function () {
   this.fruitNum = 0
   this.doubleNum = 1
 }
+
+module.exports = Score

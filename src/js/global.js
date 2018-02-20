@@ -5,7 +5,7 @@ var ctx1 = can1.getContext('2d') // 上面的canvas
 var can2 = document.getElementById('canvas2')
 var ctx2 = can2.getContext('2d') // 下面的canvas
 
-var global = { // eslint-disable-line no-unused-vars
+var global = {
   imgUrl: './images/',
   can1: can1,
   ctx1: ctx1,
@@ -25,3 +25,5 @@ var global = { // eslint-disable-line no-unused-vars
   dustOb: {},
   diffframetime: 0
 }
+
+module.exports = global // 暴露 global

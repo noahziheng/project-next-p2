@@ -1,7 +1,9 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin') // HTML 模板解析插件
+const CopyWebpackPlugin = require('copy-webpack-plugin') // 文件复制插件，处理图片
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // JS 压缩插件
+const ExtractTextPlugin = require('extract-text-webpack-plugin') // 文本提取插件，提取 css
+const CleanWebpackPlugin = require('clean-webpack-plugin') // 文件清理插件
 
 module.exports = {
   entry: path.join(__dirname, '/src/js/index.js'), // 已多次提及的唯一入口文件
@@ -13,13 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader'
-          }
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       }
     ]
   },
@@ -33,6 +32,8 @@ module.exports = {
         to: 'images'
       }
     ]),
-    new UglifyJsPlugin()
+    new UglifyJsPlugin(),
+    new ExtractTextPlugin('style.css'),
+    new CleanWebpackPlugin(['dist'])
   ]
 }
